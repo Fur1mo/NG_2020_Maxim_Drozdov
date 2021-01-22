@@ -19,7 +19,7 @@ int main()
     }while(endarray < 20 && arraynumbers[endarray] > 0);
 
     for (int i = 0; i < endarray; i++){
-        for(int spaces = 0; spaces <= ((endarray - arraynumbers[i] + 1)/2); spaces++){
+        for(int spaces = 0; spaces <= ((endarray - arraynumbers[i] + 2)/2); spaces++){
             cout << " ";
         }
         for (int star = 0; star < arraynumbers[i]; star++)
