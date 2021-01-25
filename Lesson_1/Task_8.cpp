@@ -5,23 +5,19 @@ using namespace std;
 int main()
 {
     int stars = 1;
-    int treesize = 1;
-    int inputsize = 0;
+    int treeSize = 1;
 
     cout << "Enter size of the christmas tree: ";
-    cin >> treesize;
-    inputsize = treesize;
+    cin >> treeSize;
 
-    while(inputsize > 0){
-        for(int i = 0; i < inputsize-1; i++){
+    for(int tempSize = treeSize; tempSize > 0; stars+=2, tempSize--){
+        for(int space = 0; space < tempSize-1; space++){
             cout << " ";
         }
-        for(int loop = 0; loop < stars; loop++){
+        for(int loopStars = 0; loopStars < stars; loopStars++){
             cout << "*";
         }
 
-        stars+=2;
-        inputsize--;
         cout << "\n";
     }
     for(int i =(stars-2)/2; i>0; i--){
