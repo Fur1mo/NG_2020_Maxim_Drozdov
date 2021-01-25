@@ -4,36 +4,36 @@ using namespace std;
 
 int main()
 {
-    int size = 256;
-    char str[size];
+    int sizeStr = 256;
+    char string[sizeStr];
+    int currentWord = 0;
     int counter = 0;
-    int loop = 0;
-    int temp = 0;
-    bool cond1;
-    int position = 0;
+    int greatestValue = 0;
+    bool rule1;
+    int posGreatestValue = 0;
 
     cout << "Enter string: ";
-    cin.getline(str,size);
+    cin.getline(string,sizeStr);
 
-    while(str[loop] !='\0'){
-        cond1 = ((str[loop] >= 'A') && (str[loop] <= 'Z')) || ((str[loop] >= 'a') && (str[loop] <= 'z'));
+    while(string[counter] !='\0'){
+        rule1 = ((string[counter] >= 'A') && (string[counter] <= 'Z')) || ((string[counter] >= 'a') && (string[counter] <= 'z'));
 
-        if(cond1){
+        if(rule1){
+            currentWord++;
             counter++;
-            loop++;
-            if(counter > temp){
-                temp = counter;
-                position = loop-temp;
+            if(currentWord > greatestValue){
+                greatestValue = currentWord;
+                posGreatestValue = counter-greatestValue;
             }
         }
         else{
-            counter = 0;
-            loop++;
+            currentWord = 0;
+            counter++;
         }
     }
     cout << "Result:";
-    for(int i = 0; i < temp; i++){
-        cout << str[position+i];
+    for(int i = 0; i < greatestValue; i++){
+        cout << string[posGreatestValue+i];
     }
     cout << endl;
 }
