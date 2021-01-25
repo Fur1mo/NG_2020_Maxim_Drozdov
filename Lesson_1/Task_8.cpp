@@ -20,7 +20,7 @@ int main()
             cout << "*";
         }
 
-        stars = stars + 2;
+        stars+=2;
         inputsize--;
         cout << "\n";
     }
