@@ -4,24 +4,33 @@ using namespace std;
 
 int main()
 {
-    int stars = 1;
-    int treeSize = 1;
+    int horizontalCounter = 0;
+    int verticalCounter = 0;
+    int treeSize = 0;
 
-    cout << "Enter size of the christmas tree: ";
+    cout << "Enter christmas tree size: ";
     cin >> treeSize;
 
-    for(int tempSize = treeSize; tempSize > 0; stars+=2, tempSize--){
-        for(int space = 0; space < tempSize-1; space++){
-            cout << " ";
-        }
-        for(int loopStars = 0; loopStars < stars; loopStars++){
-            cout << "*";
-        }
+    while (horizontalCounter-1 < treeSize){
+        verticalCounter = 0;
 
-        cout << "\n";
+        while(verticalCounter < treeSize - horizontalCounter){
+            cout << ' ';
+            verticalCounter++;
+        }
+        verticalCounter = 0;
+
+        while(verticalCounter < horizontalCounter * 2 - 1){
+            cout << '*';
+            verticalCounter++;
+        }
+        cout << endl;
+        horizontalCounter++;
     }
-    for(int i =(stars-2)/2; i>0; i--){
-        cout << " ";
+    verticalCounter = 0;
+    while(verticalCounter < treeSize-1){
+        cout << ' ';
+        verticalCounter++;
     }
-    cout << "*" << endl;
+    cout << '*' << endl;
 }
