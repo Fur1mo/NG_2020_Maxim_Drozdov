@@ -1,0 +1,7 @@
+*.pro
+*.user
+*.layout
+*.cbp
+*.depend
+*/debug
+
