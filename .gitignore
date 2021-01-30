@@ -1,7 +1,11 @@
-*.pro
+*.gch
+*.o
 *.user
 *.layout
 *.cbp
 *.depend
 */debug
+*/build*
+*/*build*
+*.exe
 
