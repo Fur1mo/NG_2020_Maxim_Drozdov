@@ -1,5 +1,10 @@
 *.gch
 *.o
+<<<<<<< HEAD
+=======
+*.out
+*build*
+>>>>>>> 5a42d26... Updated .gitignore .Added *build*, *debug*, *.out
 *.user
 *.layout
 *.cbp
